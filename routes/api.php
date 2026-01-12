@@ -17,8 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+<<<<<<< HEAD
 
 Route::controller(SampleController::class)
 ->group(function () {
     Route::get('/samples', 'index');
 });
+=======
+>>>>>>> f1e3744 (Initial commit - Student CRUD with update and delete)
