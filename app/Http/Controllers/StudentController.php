@@ -23,7 +23,8 @@ class StudentController extends Controller
     // Save the new student information to MySQL
     public function store(Request $request)
     {
-        $validated = $request->validate([
+        $validated = $request->validate(
+            [
             'first_name'    => 'required|string|max:255',
             'middle_name'   => 'nullable|string|max:255', 
             'last_name'     => 'required|string|max:255',
