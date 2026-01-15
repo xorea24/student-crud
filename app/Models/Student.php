@@ -2,18 +2,12 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes; // 1. Import this
 
 class Student extends Model
 {
-
-    protected $fillable = [
-        'first_name',
-        'middle_name',
-        'last_name',
-        'date_of_birth',
-        'email',
-    ];
-
+    use SoftDeletes; // 2. Add this inside the class
+    
+    protected $fillable = ['first_name', 'last_name', 'email'];
 }
