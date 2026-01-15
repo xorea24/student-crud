@@ -8,27 +8,25 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
-     *
-     * @return void
      */
     public function up()
     {
         Schema::create('students', function (Blueprint $table) {
             $table->id();
             $table->string('first_name');
-            $table->string('middle_name')->unique();
-            $table->string('last_name')->unique();
-            $table->string('date_of_birth');
+            $table->string('middle_name')->nullable(); // Changed unique to nullable
+            $table->string('last_name');               // Removed unique
+            $table->date('date_of_birth');             // Changed to date type
             $table->string('email')->unique();
-
+            
+            // Adding Soft Deletes here inside the create block
+            $table->softDeletes(); 
             $table->timestamps();
         });
     }
 
     /**
      * Reverse the migrations.
-     *
-     * @return void
      */
     public function down()
     {
