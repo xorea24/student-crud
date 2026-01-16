@@ -3,11 +3,17 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes; // 1. Import this
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Student extends Model
 {
-    use SoftDeletes; // 2. Add this inside the class
-    
-    protected $fillable = ['first_name', 'last_name', 'email'];
+    use SoftDeletes;
+
+    protected $fillable = [
+        'first_name', 
+        'middle_name', 
+        'last_name', 
+        'date_of_birth', // <--- Make sure this is here!
+        'email'
+ ];
 }
