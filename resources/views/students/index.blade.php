@@ -1,3 +1,4 @@
+
 <style>
     .student-container { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 1000px; margin: 20px auto; }
     .header-section { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
@@ -16,11 +17,22 @@
     .status-badge { background: #dcfce7; color: #166534; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; }
 </style>
 
+<div style="">
+        <form action="{{ route('logout') }}" method="POST" style="margin:0;">
+            @csrf
+            <button type="submit" style="background: none; border: 1px solid #e2e8f0; color: #64748b; padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600;">
+                Logout
+            </button>
+        </form>
+
 <div class="student-container">
     <div class="header-section">
         <h2>Students List</h2>
         <a href="{{ route('students.create') }}" class="add-btn">+ Add New Student</a>
     </div>
+
+
+    
 
     @if(session('success'))
         <div style="background: #dcfce7; color: #166534; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
@@ -60,3 +72,4 @@
     </div>
     @endforeach
 </div>
+
