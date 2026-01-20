@@ -84,7 +84,7 @@
         <h2 style="color: white; margin-top: 0; letter-spacing: -1px;">Sign in</h2>
         <p style="color: #64748b; margin-bottom: 30px; font-size: 0.9rem;">Access the Student Management System</p>
 
-        <form action="{{ route('login.submit') }}" method="POST">
+        <form action="{{ route('login.submit') }" method="POST">
             @csrf
             <div class="form-group">
                 <label>Email</label>

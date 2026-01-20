@@ -39,7 +39,7 @@ class AuthController extends Controller
             $request->session()->regenerate();
             
             // Redirect to intended page or default to students dashboard
-            return redirect()->intended('students');
+            return redirect()->intended('dashboard');
         }
 
         // Return back with error message if authentication fails

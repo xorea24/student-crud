@@ -18,7 +18,7 @@
         justify-content: center;
         font-family: 'Inter', sans-serif;
         /* Primary brand color pulled from config/settings.php */
-        background: linear-gradient(-45deg, #020617, #0f172a, {{ config('settings.theme_color', '#1e1b4b') }}, #020617);
+        background: linear-gradient(-45deg, #020617, #0f172a, {{ config('settings.theme_color', '#a9a9a9') }}, #020617);
         background-size: 400% 400%;
         animation: gradientFlow 15s ease infinite;
         overflow: hidden;

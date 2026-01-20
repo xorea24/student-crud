@@ -10,14 +10,12 @@ class StudentController extends Controller
     /**
      * Display a listing of the students.
      */
-    public function index()
-    {
-        // Retrieve all records from the students table
-        $students = Student::all();
-        
-        // Return the index view and pass the students data to it
-        return view('students.index', compact('students'));
-    }
+public function index()
+{
+   // No statistics needed, just return the simple dashboard view
+    return view('dashboard');
+}
+    
 
     /**
      * Show the form for creating a new student.
@@ -27,6 +25,8 @@ class StudentController extends Controller
         // Display the form located at resources/views/students/create.blade.php
         return view('students.create');
     }
+
+    
 
     /**
      * Store a newly created student in the database.
@@ -103,3 +103,4 @@ class StudentController extends Controller
         return redirect()->route('students.index')->with('success', 'Student deleted successfully.');
     }
 }
+
